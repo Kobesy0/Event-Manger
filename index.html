@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Event Mager | Kobesy</title>
+</head>
+<body>
+    <h1>Event Manger</h1>
+    <div class="container">
+        <div class="additions">
+            <div class="sun-button" title="Switch light"><i class="fa-solid fa-sun"></i></div>
+            <div class="moon-button" title="Switch light" ><i class="fa-solid fa-moon"></i></div>
+            <div class="instagram" title="My instagram"><i class="fa-brands fa-instagram"></i></div>
+            <div class="github" title="My github"><i class="fa-brands fa-github"></i></div>
+            <div class="whatsapp" title="Contact me"><i class="fa-brands fa-whatsapp"></i></div>
+        </div>
+        <div class="add-box">
+            <h2>Add Event Card</h2>
+                <div>
+                    <label for="eventName">Event Name</label>
+                    <input type="text" class="event-name" id="eventName">
+                    <span class="eventNameError"></span>
+                </div>
+                <div>
+                    <label for="eventDate" >Event Orgnaizer</label>
+                    <input type="text" class="organizer-name" id="eventDate" >
+                    <span class="eventOrganizerError"></span>
+                </div>
+                <div>
+                    <input type="date" class="event-date">
+                    <span class="eventDateError"></span>
+                </div>
+                <button class="add">Add</button>
+        </div>
+        <div class="events"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

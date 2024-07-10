@@ -1,0 +1,296 @@
+*{-moz-box-sizing: border-box;box-sizing: border-box;}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #e0e0e0;
+    transition: all .4s ease;
+}
+body.light-mode {
+    background:#e0e0e0;
+}
+body.dark-mode{
+    background: #212121;
+}
+.container{
+  margin: 50px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 900px;
+}
+@media (max-width:750px) {
+  .container{
+    max-width: 500px;
+    margin: 0px auto 0;
+  }
+}
+h1{
+  background: cornflowerblue;
+  letter-spacing: 9.1px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+/* ------------------------------------------ */
+/* This is the card in case (Dark Mode) */
+body.dark-mode .add-box{
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+}
+body.dark-mode .add-box h2{
+  color: #939393;
+}
+body.dark-mode .add-box label{
+  background: #212121;
+}
+body.dark-mode .add-box input{
+  color: #fff;
+}
+/* End case in (Dark Mode) */
+/* ------------------------------------- */
+
+/* This is the main Card  */
+.add-box{
+  margin: 0 auto;
+  background: #e8e8e8;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  padding: 20px;
+  box-shadow: 15px 15px 30px
+  #bebebe,
+  -15px -15px 30px #ffffff;
+  }
+
+.add-box h2{
+  text-align: center;
+  letter-spacing: 0.9px;
+}
+
+.add-box input{
+  border: 2px solid #c8c8c8;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-bottom: 31px;
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  width: 100%;
+}
+
+.add-box label{
+  transform: translateY(-50%) scale(.9);
+  background: #e8e8e8;
+  color: #646464;
+  position: absolute;
+  left: 0;
+  padding: 2px;
+  pointer-events: none;
+  margin-left: 50px;
+}
+
+input:focus {
+  border-color: #9696c8;
+}
+
+/* Star the main button ( Add button ) */
+.check{
+  display: none;
+}
+button.add {
+    display: block;
+    color: #939393;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 10px;
+  }
+  button.add:active{
+    background: cornflowerblue;
+    color: #FFf;
+  }
+  button::before {
+    margin-left: auto;
+  }
+  
+  button.add::after,
+  button.add::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: cornflowerblue;
+    display: block;
+    transition: 0.5s;
+  }
+
+button.add:hover::after, 
+  button.add:hover::before {
+  width: 100%;
+}
+  /* End Add button  */
+
+  /* Some additions  */
+.additions{
+  top: 150px;
+  z-index: 2;
+  position: absolute;
+  width: fit-content;
+  margin-left: 40px;
+  left: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all .3s ease;
+  border-radius: 35px;
+  background: #e8e8e8;
+  padding: 10px;
+  box-shadow: 15px 15px 30px
+    #bebebe,
+    -15px -15px 30px #ffffff;
+}
+
+body.dark-mode .additions{
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25),
+              -15px -15px 30px rgb(60, 60, 60);
+}
+
+.additions .instagram{
+  color:#C13584 ;
+}
+
+body.dark-mode .additions .github{
+  color: #e0e0e0
+}
+.additions .whatsapp{
+  color: green;
+}
+.sun-button{
+  display: none;
+}
+
+.moon-button{
+  color: #939393;
+}
+.sun-button{
+  color: #ffff00c3;
+}
+.sun-button:active{
+  color: yellow;
+}
+.moon-button:active{
+  color: #363636;
+}
+
+
+/* End from Additions */
+
+/* Start the event card */
+.events{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px 50px;
+}
+/* this is the card under the real card */
+.event {
+  height: 254px;
+  background-image: linear-gradient(163deg,#00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+  position: relative;
+}
+/* this is the real card */
+.event2 {
+  width: 100%;
+  height: 254px;
+  position: absolute;
+  background-color: #0e3d7a;
+  color: #e0e0e0;
+  transition: all .2s;
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+.event2:hover {transform: scale(0.98);border-radius: 20px;}
+/* Hover the light mode  */
+.event:hover {box-shadow: 0px 0px 30px 15px #0095ff4d;}
+/* Hover in dark mode  */
+body.dark-mode .event:hover {box-shadow: 0px 0px 35px 5px #00ff754d}
+
+.event2 h3{
+  margin: 0 auto 15px;
+  text-align: center;
+}
+.event2 p{
+  display: flex;
+  justify-content: space-between;
+}
+.event .edit,
+.event2 .delete {
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #c0bebe70;
+  cursor: pointer;
+  transition-duration: .3s;
+  display: block;
+  margin: 0 auto;
+}
+
+/* The buttons in event  */
+.buttons{
+  display: flex;
+  align-items: center;
+}
+.event .buttons .delete:hover {background-color: #ff4545;color: #dedede;}
+.event .buttons .edit:hover{background: #00ff75}
+
+/* These are about the fill out the failed   */
+.eventNameError,
+.eventOrganizerError,
+.eventDateError{
+  color: red;
+  position: absolute;
+  left: 35px;
+  top: 139px;
+}
+.eventOrganizerError{
+  left: 35px;
+  top: 216px;
+}
+.eventDateError{
+  left: 35px;
+  top: 289px;
+}
+
+
+@media(max-width:750px){
+  .additions{
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 0 0 0;
+    margin: 15px 80px;
+  }
+  body.dark-mode .additions{
+    box-shadow: 0 0 0 0 ;
+  }
+  .add-box{
+    
+    max-width: 350px;
+    margin: 100px 0 0 0;
+  }
+}
