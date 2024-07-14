@@ -160,7 +160,6 @@ button.add:hover::after,
     -15px -15px 30px #ffffff;
 }
 
-.additions .sun-btn{color: #dada03;}
 body.dark-mode .additions{
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
@@ -174,19 +173,15 @@ body.dark-mode .additions{
 body.dark-mode .additions .github{
   color: #e0e0e0
 }
-.additions .whatsapp{
-  color: green;
-}
-.sun-button{
-  display: none;
-}
+.additions .whatsapp{color: green;}
 
 .moon-button{
   color: #939393;
 }
-.sun-button{
-  color: #ffff00c3;
+.additions .sun-btn{
+    color: #dada03;
 }
+
 .sun-button:active{
   color: yellow;
 }
