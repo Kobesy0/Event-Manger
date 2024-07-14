@@ -11,23 +11,27 @@ const eventOrganizer = document.querySelector(".organizer-name");
 const eventDate = document.querySelector(".event-date");
 
 // ------------------------------------------
-// Start Change the light of the website 
-const body = document.body;
-moonButton.addEventListener("click", ()=> {
-    moonButton.style.display = "none"
-    body.classList.add('dark-mode');
-    sunButton.style.display = 'block';
-    body.classList.remove("light-mode");
-})
+// Make the light of the page (Dark or Light)
+document.addEventListener("DOMContentLoaded",()=> {
+    const moonButton = document.querySelector(".moon-btn");
+    const sunButton = document.querySelector(".sun-btn");
+    const body = document.body;
 
-sunButton.addEventListener("click", ()=> {
-    sunButton.style.display = "none";
-    body.classList.add("light-mode");
-    moonButton.style.display = 'block';
-    body.classList.remove("dark-mode")
+    const lightState = localStorage.getItem("lightState")
+    if(lightState){
+        body.classList.add(lightState)
+    }
+    moonButton.addEventListener("click" , ()=>{
+        body.classList.remove("light-mode")
+        body.classList.add("dark-mode")
+        localStorage.setItem("lightState", "dark-mode")
+    })
+    sunButton.addEventListener("click" , ()=> {
+        body.classList.remove("dark-mode")
+        body.classList.add("light-mode");
+        localStorage.setItem("lightState", "light-mode")
+    })
 })
-// End Change the light of the website 
-
 // --------------------------------------
 
 // About social media 
