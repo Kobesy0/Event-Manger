@@ -1,5 +1,3 @@
-const sunButton = document.querySelector('.sun-button');
-const moonButton = document.querySelector('.moon-button');
 const instagram = document.querySelector(".instagram");
 const github = document.querySelector(".github");
 const whatsapp = document.querySelector(".whatsapp");
