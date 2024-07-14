@@ -13,7 +13,7 @@ body.light-mode {background: #e0e0e0}
 
 body.dark-mode .moon-btn{display: none;}
 body.light-mode .sun-btn{display: none;}
-
+body.dark-mode .sun-btn{color:yellow}
 .container{
   margin: 50px auto;
   padding-left: 15px;
