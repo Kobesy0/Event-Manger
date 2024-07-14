@@ -175,20 +175,9 @@ body.dark-mode .additions .github{
 }
 .additions .whatsapp{color: green;}
 
-.moon-button{
-  color: #939393;
-}
 .additions .sun-btn{
     color: #dada03;
 }
-
-.sun-button:active{
-  color: yellow;
-}
-.moon-button:active{
-  color: #363636;
-}
-
 
 /* End from Additions */
 
