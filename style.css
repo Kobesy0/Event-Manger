@@ -13,7 +13,6 @@ body.light-mode {background: #e0e0e0}
 
 body.dark-mode .moon-btn{display: none;}
 body.light-mode .sun-btn{display: none;}
-.sun-btn{color: #dada03;}
 .container{
   margin: 50px auto;
   padding-left: 15px;
@@ -161,6 +160,7 @@ button.add:hover::after,
     -15px -15px 30px #ffffff;
 }
 
+.additions .sun-btn{color: #dada03;}
 body.dark-mode .additions{
   background: #212121;
   box-shadow: 15px 15px 30px rgb(25, 25, 25),
